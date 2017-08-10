@@ -1,0 +1,27 @@
+
+<div class="article">
+    <h1 class="article--title">{{ body.article.title }}</h1>
+    <figure class="article--figure">
+        <img src="{{body.article.cover}}" alt="">
+    </figure>
+
+    {{#each body.article.body}}
+        {{#if (eq this.type "h2")}}
+            <h2 class="article--heading">
+                {{this.body}}
+            </h2>
+        {{/if}}
+
+        {{#if (eq this.type "plaintext")}}
+            <p class="article--text">
+                {{this.body}}
+            </p>
+        {{/if}}
+
+        {{#if (eq this.type "pull_quote")}}
+            <blockquote class="article--pullquote">
+                {{this.body}}
+            </blockquote>
+        {{/if}}
+    {{/each}}
+</div>

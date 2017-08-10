@@ -1,0 +1,22 @@
+{
+  "name": "tech-test",
+  "version": "1.0.0",
+  "description": "Tech Test",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "handlebars": "^4.0.10",
+    "just-handlebars-helpers": "^1.0.13",
+    "npm-sass": "^2.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-sass": "npm-sass ./src/scss/styles.scss > ./dist/css/styles.css",
+    "start-server": "nodemon app.js"
+  },
+  "author": " (Ashleigh Sutton)",
+  "license": "ISC"
+}

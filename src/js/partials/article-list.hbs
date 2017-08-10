@@ -1,0 +1,19 @@
+
+<div class="article-list">
+    <ul class="article-list--wrapper">
+        {{#each body.articleList}}
+            <li class="article-list-item">
+                <a href="/article/{{this.id}}" class="article-list-item--link">
+                    <figure>
+                        <img src="{{this.cover}}" class="article-list-item--image" alt="">
+                        <figcaption>
+                            <h5 class="article-list-item--title">
+                                {{this.title}}
+                            </h5>
+                        </figcaption>
+                    </figure>
+                </a>
+            </li>
+        {{/each}}
+    </ul>
+</div>
